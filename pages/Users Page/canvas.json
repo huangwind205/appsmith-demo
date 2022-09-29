@@ -1,0 +1,2452 @@
+{
+  "unpublishedPage": {
+    "name": "Users Page",
+    "slug": "users-page",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1160,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1300,
+          "containerStyle": "none",
+          "snapRows": 136,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 52,
+          "minHeight": 1292,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0,
+          "dynamicBindingPathList": [],
+          "children": [
+            {
+              "widgetName": "Text1",
+              "rightColumn": 12,
+              "textAlign": "LEFT",
+              "widgetId": "5302vrcr7x",
+              "topRow": 0,
+              "bottomRow": 4,
+              "parentRowSpace": 40,
+              "isVisible": true,
+              "type": "TEXT_WIDGET",
+              "fontStyle": "BOLD",
+              "version": 1,
+              "textColor": "#231F20",
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "fontSize": "HEADING1",
+              "text": "👫 Users"
+            },
+            {
+              "widgetName": "usersTable",
+              "columnOrder": [
+                "id",
+                "name",
+                "gender",
+                "latitude",
+                "longitude",
+                "dob",
+                "phone",
+                "email",
+                "image",
+                "country"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [],
+              "topRow": 4,
+              "bottomRow": 68,
+              "parentRowSpace": 10,
+              "onPageChange": "{{getUsers.run()}}",
+              "isSortable": true,
+              "type": "TABLE_WIDGET",
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onSearchTextChanged"
+                },
+                {
+                  "key": "onRowSelected"
+                },
+                {
+                  "key": "onPageChange"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "defaultSearchText"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.gender.computedValue"
+                },
+                {
+                  "key": "primaryColumns.latitude.computedValue"
+                },
+                {
+                  "key": "primaryColumns.longitude.computedValue"
+                },
+                {
+                  "key": "primaryColumns.dob.computedValue"
+                },
+                {
+                  "key": "primaryColumns.phone.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email.computedValue"
+                },
+                {
+                  "key": "primaryColumns.image.computedValue"
+                },
+                {
+                  "key": "primaryColumns.country.computedValue"
+                },
+                {
+                  "key": "primaryColumns.name.computedValue"
+                }
+              ],
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "isCellVisible": true
+                },
+                "gender": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "gender",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "gender",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.gender))}}",
+                  "isCellVisible": true
+                },
+                "latitude": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "latitude",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "latitude",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.latitude))}}",
+                  "isCellVisible": true
+                },
+                "longitude": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "longitude",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "longitude",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.longitude))}}",
+                  "isCellVisible": true
+                },
+                "dob": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "dob",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "dob",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.dob))}}",
+                  "isCellVisible": true
+                },
+                "phone": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "phone",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "phone",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.phone))}}",
+                  "isCellVisible": true
+                },
+                "email": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.email))}}",
+                  "isCellVisible": true
+                },
+                "image": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "image",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "image",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.image))}}",
+                  "isCellVisible": true
+                },
+                "country": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "country",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "country",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.country))}}",
+                  "isCellVisible": true
+                },
+                "name": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "name",
+                  "computedValue": "{{usersTable.sanitizedTableData.map((currentRow) => ( currentRow.name))}}",
+                  "isCellVisible": true
+                }
+              },
+              "delimiter": ",",
+              "onRowSelected": "{{getOrders.run()}}",
+              "columnActions": [],
+              "defaultSearchText": "{{appsmith.URL.queryParams.email || \"\"}}",
+              "migrated": true,
+              "derivedColumns": {},
+              "hiddenColumns": [
+                "createdAt",
+                "updatedAt",
+                "avatar",
+                "dob",
+                "gender",
+                "role",
+                "status",
+                "address"
+              ],
+              "rightColumn": 36,
+              "textSize": "PARAGRAPH",
+              "widgetId": "z0l09s5jaz",
+              "isVisibleFilters": true,
+              "tableData": "{{getUsers.data}}",
+              "isVisible": true,
+              "label": "Data",
+              "searchKey": "",
+              "fontStyle": "REGULAR",
+              "version": 3,
+              "parentId": "0",
+              "serverSidePaginationEnabled": true,
+              "isLoading": false,
+              "onSearchTextChanged": "{{getUsers.run()}}",
+              "isVisibleCompactMode": true,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "columnSizeMap": {
+                "address": 204,
+                "name": 226,
+                "id": 74,
+                "email": 311,
+                "image": 339
+              },
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "widgetName": "Modal1",
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "widgetId": "qcv5mxmdse",
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "isVisible": false,
+              "canOutsideClickClose": true,
+              "type": "MODAL_WIDGET",
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "shouldScrollContents": true,
+              "blueprint": {
+                "view": [
+                  {
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "shouldScrollContents": false,
+                      "blueprint": {
+                        "view": [
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 2
+                            },
+                            "position": {
+                              "top": 0,
+                              "left": 14
+                            },
+                            "type": "ICON_WIDGET",
+                            "props": {
+                              "color": "#040627",
+                              "iconName": "cross",
+                              "iconSize": 24
+                            }
+                          },
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 10
+                            },
+                            "position": {
+                              "top": 0,
+                              "left": 0
+                            },
+                            "type": "TEXT_WIDGET",
+                            "props": {
+                              "text": "Modal Title",
+                              "textStyle": "HEADING"
+                            }
+                          },
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 3
+                            },
+                            "position": {
+                              "top": 4,
+                              "left": 10
+                            },
+                            "type": "BUTTON_WIDGET",
+                            "props": {
+                              "buttonStyle": "SECONDARY_BUTTON",
+                              "text": "Cancel"
+                            }
+                          },
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 3
+                            },
+                            "position": {
+                              "top": 4,
+                              "left": 13
+                            },
+                            "type": "BUTTON_WIDGET",
+                            "props": {
+                              "buttonStyle": "PRIMARY_BUTTON",
+                              "text": "Confirm"
+                            }
+                          }
+                        ],
+                        "operations": [
+                          {
+                            "type": "MODIFY_PROPS"
+                          }
+                        ]
+                      },
+                      "detachFromLayout": true,
+                      "children": [],
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "canExtend": true
+                    }
+                  }
+                ]
+              },
+              "isLoading": false,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "widgetName": "Canvas1",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "9pgyrkail5",
+                  "topRow": 0,
+                  "bottomRow": 370,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": true,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "qcv5mxmdse",
+                  "shouldScrollContents": false,
+                  "blueprint": {
+                    "view": [
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 2
+                        },
+                        "position": {
+                          "top": 0,
+                          "left": 14
+                        },
+                        "type": "ICON_WIDGET",
+                        "props": {
+                          "color": "#040627",
+                          "iconName": "cross",
+                          "iconSize": 24
+                        }
+                      },
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 10
+                        },
+                        "position": {
+                          "top": 0,
+                          "left": 0
+                        },
+                        "type": "TEXT_WIDGET",
+                        "props": {
+                          "text": "Modal Title",
+                          "textStyle": "HEADING"
+                        }
+                      },
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 3
+                        },
+                        "position": {
+                          "top": 4,
+                          "left": 10
+                        },
+                        "type": "BUTTON_WIDGET",
+                        "props": {
+                          "buttonStyle": "SECONDARY_BUTTON",
+                          "text": "Cancel"
+                        }
+                      },
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 3
+                        },
+                        "position": {
+                          "top": 4,
+                          "left": 13
+                        },
+                        "type": "BUTTON_WIDGET",
+                        "props": {
+                          "buttonStyle": "PRIMARY_BUTTON",
+                          "text": "Confirm"
+                        }
+                      }
+                    ],
+                    "operations": [
+                      {
+                        "type": "MODIFY_PROPS"
+                      }
+                    ]
+                  },
+                  "minHeight": 364,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "isRequired": false,
+                      "widgetName": "Icon1",
+                      "rightColumn": 64,
+                      "onClick": "{{closeModal('Modal1')}}",
+                      "color": "#040627",
+                      "iconName": "cross",
+                      "widgetId": "3g9bl2sr58",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "isVisible": true,
+                      "type": "ICON_WIDGET",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24
+                    },
+                    {
+                      "widgetName": "Text2",
+                      "rightColumn": 56,
+                      "textAlign": "LEFT",
+                      "widgetId": "lddwvwekdx",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "HEADING1",
+                      "text": "🖋️  Edit {{usersTable.selectedRow.name}}'s Profile"
+                    },
+                    {
+                      "widgetName": "Button1",
+                      "rightColumn": 43,
+                      "onClick": "{{closeModal()}}",
+                      "isDefaultClickDisabled": true,
+                      "buttonColor": "#2E3D49",
+                      "widgetId": "0asi0ps632",
+                      "topRow": 31,
+                      "bottomRow": 35,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 31,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "ROUNDED",
+                      "buttonVariant": "TERTIARY",
+                      "text": "Cancel",
+                      "isDisabled": false
+                    },
+                    {
+                      "widgetName": "Button2",
+                      "onClick": "{{updateUser.run(() => getUsers.run(() => closeModal('Modal1')), () => showAlert('error'))}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "buttonColor": "#2E3D49",
+                      "topRow": 31,
+                      "bottomRow": 35,
+                      "type": "BUTTON_WIDGET",
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 43,
+                      "dynamicBindingPathList": [],
+                      "text": "Save",
+                      "isDisabled": false,
+                      "rightColumn": 63,
+                      "isDefaultClickDisabled": true,
+                      "iconName": "floppy-disk",
+                      "widgetId": "9aoww0u181",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "borderRadius": "ROUNDED",
+                      "buttonVariant": "PRIMARY",
+                      "iconAlign": "left"
+                    },
+                    {
+                      "widgetName": "Text10",
+                      "rightColumn": 17,
+                      "textAlign": "RIGHT",
+                      "widgetId": "zxqqitzf07",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Name"
+                    },
+                    {
+                      "widgetName": "Text11",
+                      "rightColumn": 17,
+                      "textAlign": "RIGHT",
+                      "widgetId": "52whn6clnv",
+                      "topRow": 10,
+                      "bottomRow": 14,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Email"
+                    },
+                    {
+                      "widgetName": "Text12",
+                      "rightColumn": 17,
+                      "textAlign": "RIGHT",
+                      "widgetId": "qhmfxrxrp8",
+                      "topRow": 18,
+                      "bottomRow": 22,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Country"
+                    },
+                    {
+                      "isRequired": false,
+                      "widgetName": "addressInput",
+                      "rightColumn": 60,
+                      "widgetId": "5w60gql1bf",
+                      "topRow": 18,
+                      "bottomRow": 22,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "label": "",
+                      "type": "INPUT_WIDGET",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": false,
+                      "leftColumn": 17,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "defaultText": "{{usersTable.selectedRow.country}}",
+                      "isDisabled": false,
+                      "validation": "true"
+                    },
+                    {
+                      "isRequired": true,
+                      "widgetName": "emailInput",
+                      "rightColumn": 60,
+                      "widgetId": "l97o8yvlrc",
+                      "topRow": 10,
+                      "bottomRow": 14,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "label": "",
+                      "type": "INPUT_WIDGET",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": false,
+                      "leftColumn": 17,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "defaultText": "{{usersTable.selectedRow.email}}",
+                      "isDisabled": false,
+                      "validation": "true"
+                    },
+                    {
+                      "isRequired": false,
+                      "widgetName": "nameInput",
+                      "rightColumn": 60,
+                      "widgetId": "dorbm7hw83",
+                      "topRow": 6,
+                      "bottomRow": 10,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "label": "",
+                      "type": "INPUT_WIDGET",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "resetOnSubmit": false,
+                      "leftColumn": 17,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "defaultText": "{{usersTable.selectedRow.name}}",
+                      "isDisabled": false,
+                      "validation": "true"
+                    },
+                    {
+                      "widgetName": "Text20",
+                      "rightColumn": 17,
+                      "textAlign": "RIGHT",
+                      "widgetId": "gds83r70jn",
+                      "topRow": 14,
+                      "bottomRow": 18,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 30.75,
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Phone No"
+                    },
+                    {
+                      "isRequired": false,
+                      "widgetName": "phoneInput",
+                      "rightColumn": 60,
+                      "widgetId": "lcmqk3xayr",
+                      "topRow": 14,
+                      "bottomRow": 18,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "label": "",
+                      "type": "INPUT_WIDGET",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "regex": "",
+                      "parentColumnSpace": 30.75,
+                      "dynamicTriggerPathList": [],
+                      "resetOnSubmit": false,
+                      "leftColumn": 17,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultText"
+                        }
+                      ],
+                      "inputType": "TEXT",
+                      "defaultText": "{{usersTable.selectedRow.phone || \"\"}}",
+                      "isDisabled": false,
+                      "validation": "true"
+                    },
+                    {
+                      "widgetName": "Text25",
+                      "rightColumn": 17,
+                      "textAlign": "RIGHT",
+                      "widgetId": "2gxy5su7fa",
+                      "topRow": 22,
+                      "bottomRow": 26,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "type": "TEXT_WIDGET",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "parentColumnSpace": 8,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Gender"
+                    },
+                    {
+                      "isRequired": false,
+                      "widgetName": "gender_select",
+                      "isFilterable": true,
+                      "rightColumn": 60,
+                      "widgetId": "gi4dvjt2q4",
+                      "topRow": 22,
+                      "bottomRow": 26,
+                      "parentRowSpace": 10,
+                      "isVisible": true,
+                      "label": "",
+                      "type": "DROP_DOWN_WIDGET",
+                      "version": 1,
+                      "parentId": "9pgyrkail5",
+                      "isLoading": false,
+                      "defaultOptionValue": "{{usersTable.selectedRow.gender}}",
+                      "parentColumnSpace": 8,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 17,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "defaultOptionValue"
+                        }
+                      ],
+                      "options": "[\n  {\n    \"label\": \"Male\",\n    \"value\": \"male\"\n  },\n  {\n    \"label\": \"Female\",\n    \"value\": \"female\"\n  },\n  {\n    \"label\": \"Transgender\",\n    \"value\": \"transgender\"\n  }\n]",
+                      "isDisabled": false
+                    }
+                  ],
+                  "isDisabled": false
+                }
+              ],
+              "width": 532,
+              "height": 364
+            },
+            {
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container1",
+              "rightColumn": 64,
+              "widgetId": "5wiefwlh3m",
+              "containerStyle": "card",
+              "topRow": 4,
+              "bottomRow": 27,
+              "parentRowSpace": 40,
+              "isVisible": true,
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "blueprint": {
+                "view": [
+                  {
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "detachFromLayout": true,
+                      "children": [
+                        "8c8ixb84rt",
+                        "vxs1336eti",
+                        "n1tn6qwmfu",
+                        "75njm0wxgx",
+                        "2wymlwykex",
+                        "4x7s4ffqyc",
+                        "m8jxuiwony",
+                        "3mqfe3k3qf",
+                        "lhds2qaxeg",
+                        "p4p3or0jcd",
+                        "uh5tweohvx"
+                      ],
+                      "containerStyle": "none",
+                      "canExtend": false
+                    }
+                  }
+                ]
+              },
+              "isLoading": false,
+              "parentColumnSpace": 74,
+              "leftColumn": 36,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "widgetName": "Canvas2",
+                  "rightColumn": 2368,
+                  "detachFromLayout": true,
+                  "widgetId": "c2nnq6o54h",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 220,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "5wiefwlh3m",
+                  "minHeight": 230,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "Button3",
+                      "onClick": "{{showModal('Modal1')}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "buttonColor": "#2E3D49",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 40,
+                      "type": "BUTTON_WIDGET",
+                      "parentColumnSpace": 20.625,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 54,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "text": "Edit",
+                      "isDisabled": false,
+                      "rightColumn": 64,
+                      "isDefaultClickDisabled": true,
+                      "iconName": "edit",
+                      "widgetId": "8c8ixb84rt",
+                      "isVisible": "{{usersTable.selectedRow.id !== \"\"}}",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "borderRadius": "ROUNDED",
+                      "buttonVariant": "TERTIARY",
+                      "iconAlign": "left"
+                    },
+                    {
+                      "image": "{{usersTable.selectedRow.image.replace(\"/med\", \"\")}}",
+                      "widgetName": "Image1",
+                      "rightColumn": 21,
+                      "objectFit": "contain",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "widgetId": "vxs1336eti",
+                      "topRow": 0,
+                      "bottomRow": 14,
+                      "parentRowSpace": 40,
+                      "isVisible": "{{usersTable.selectedRow.id !== \"\"}}",
+                      "type": "IMAGE_WIDGET",
+                      "version": 1,
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "parentColumnSpace": 20.625,
+                      "dynamicTriggerPathList": [],
+                      "imageShape": "RECTANGLE",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "image"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "defaultImage": "https://res.cloudinary.com/drako999/image/upload/v1589196259/default.png"
+                    },
+                    {
+                      "widgetName": "Text3",
+                      "rightColumn": 46,
+                      "textAlign": "LEFT",
+                      "widgetId": "n1tn6qwmfu",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "parentColumnSpace": 20.625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "HEADING2",
+                      "text": "{{usersTable.selectedRow.name}}"
+                    },
+                    {
+                      "widgetName": "Text4",
+                      "rightColumn": 54,
+                      "textAlign": "LEFT",
+                      "widgetId": "75njm0wxgx",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "parentColumnSpace": 20.625,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{usersTable.selectedRow.email}}"
+                    },
+                    {
+                      "widgetName": "Text5",
+                      "rightColumn": 54,
+                      "textAlign": "LEFT",
+                      "widgetId": "2wymlwykex",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "parentColumnSpace": 25.25,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{usersTable.selectedRow.country || \"<h2>👈🏿 Select a user</h2>\"}}"
+                    },
+                    {
+                      "widgetName": "Text6",
+                      "rightColumn": 45,
+                      "textAlign": "LEFT",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "widgetId": "4x7s4ffqyc",
+                      "topRow": 16,
+                      "bottomRow": 20,
+                      "parentRowSpace": 40,
+                      "isVisible": "{{usersTable.selectedRow.id !== undefined}}",
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "parentColumnSpace": 25.25,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{ (usersTable.selectedRow.gender === \"male\" ? \"♂️ \" : usersTable.selectedRow.gender === \"female\" ? \"♀️ \" : \"\") + usersTable.selectedRow.gender}}"
+                    },
+                    {
+                      "widgetName": "Text21",
+                      "rightColumn": 54,
+                      "textAlign": "LEFT",
+                      "widgetId": "uvw0ma9kfr",
+                      "topRow": 12,
+                      "bottomRow": 16,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "c2nnq6o54h",
+                      "isLoading": false,
+                      "parentColumnSpace": 29.875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 22,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{usersTable.selectedRow.phone || \"\"}}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "widgetName": "ordersTable",
+              "columnOrder": [
+                "id",
+                "orderDate",
+                "deliveryAddress",
+                "orderAmount",
+                "status",
+                "userId",
+                "paymentId"
+              ],
+              "isVisibleDownload": true,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "topRow": 76,
+              "bottomRow": 128,
+              "parentRowSpace": 10,
+              "isSortable": true,
+              "type": "TABLE_WIDGET",
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onRowSelected"
+                }
+              ],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "tableData"
+                },
+                {
+                  "key": "isVisible"
+                },
+                {
+                  "key": "primaryColumns.id.computedValue"
+                },
+                {
+                  "key": "primaryColumns.deliveryAddress.computedValue"
+                },
+                {
+                  "key": "primaryColumns.orderAmount.computedValue"
+                },
+                {
+                  "key": "primaryColumns.orderDate.computedValue"
+                },
+                {
+                  "key": "primaryColumns.status.computedValue"
+                },
+                {
+                  "key": "primaryColumns.userId.computedValue"
+                },
+                {
+                  "key": "primaryColumns.paymentId.computedValue"
+                }
+              ],
+              "primaryColumns": {
+                "id": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "id",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "id",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                  "isCellVisible": true
+                },
+                "deliveryAddress": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "deliveryAddress",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "deliveryAddress",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.deliveryAddress))}}",
+                  "isCellVisible": true
+                },
+                "orderAmount": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "orderAmount",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "orderAmount",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.orderAmount))}}",
+                  "isCellVisible": true
+                },
+                "orderDate": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "orderDate",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "date",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDerived": false,
+                  "label": "orderDate",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.orderDate))}}",
+                  "isCellVisible": true,
+                  "inputFormat": "YYYY-MM-DD",
+                  "outputFormat": "Do MMM YYYY"
+                },
+                "status": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "status",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "status",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
+                  "isCellVisible": true
+                },
+                "userId": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "userId",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "userId",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.userId))}}",
+                  "isCellVisible": true
+                },
+                "paymentId": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "paymentId",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "fontStyle": "REGULAR",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": false,
+                  "isDerived": false,
+                  "label": "paymentId",
+                  "computedValue": "{{ordersTable.sanitizedTableData.map((currentRow) => ( currentRow.paymentId))}}",
+                  "isCellVisible": true
+                }
+              },
+              "delimiter": ",",
+              "onRowSelected": "{{getOrderProducts.run()}}",
+              "migrated": true,
+              "derivedColumns": {},
+              "hiddenColumns": [
+                "userId",
+                "orderDate"
+              ],
+              "rightColumn": 35,
+              "textSize": "PARAGRAPH",
+              "widgetId": "xr3qu1jpj8",
+              "isVisibleFilters": true,
+              "tableData": "{{getOrders.data}}",
+              "isVisible": "{{usersTable.selectedRow.id !== \"\"}}",
+              "label": "Data",
+              "searchKey": "",
+              "fontStyle": "REGULAR",
+              "version": 3,
+              "parentId": "0",
+              "isLoading": false,
+              "isVisibleCompactMode": true,
+              "horizontalAlignment": "LEFT",
+              "isVisibleSearch": true,
+              "isVisiblePagination": true,
+              "columnSizeMap": {
+                "orderAmount": 128,
+                "deliveryAddress": 241,
+                "id": 60,
+                "userId": 88,
+                "status": 125,
+                "paymentId": 219
+              },
+              "verticalAlignment": "CENTER"
+            },
+            {
+              "widgetName": "Text13",
+              "rightColumn": 41,
+              "textAlign": "LEFT",
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "widgetId": "euwmlckp34",
+              "topRow": 72,
+              "bottomRow": 76,
+              "parentRowSpace": 40,
+              "isVisible": "{{usersTable.selectedRow.id !== \"\"}}",
+              "type": "TEXT_WIDGET",
+              "fontStyle": "BOLD",
+              "version": 1,
+              "textColor": "#231F20",
+              "parentId": "0",
+              "isLoading": false,
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 0,
+              "dynamicBindingPathList": [
+                {
+                  "key": "text"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "fontSize": "HEADING1",
+              "text": "📦 {{usersTable.selectedRow ? usersTable.selectedRow.name + \"'s Orders\" : \"☝🏽 Select a user\"}}"
+            },
+            {
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container2",
+              "rightColumn": 64,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "widgetId": "xlb8hua7ie",
+              "containerStyle": "card",
+              "topRow": 76,
+              "bottomRow": 128,
+              "parentRowSpace": 40,
+              "isVisible": "{{ordersTable.selectedRow.id !== undefined && ordersTable.selectedRow.id !== \"\"}}",
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "blueprint": {
+                "view": [
+                  {
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "detachFromLayout": true,
+                      "children": [
+                        "v8531ch9d8",
+                        "0cz98i5vmt"
+                      ],
+                      "containerStyle": "none",
+                      "canExtend": false
+                    }
+                  }
+                ]
+              },
+              "isLoading": false,
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 35,
+              "dynamicBindingPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "children": [
+                {
+                  "widgetName": "Canvas3",
+                  "rightColumn": 2368,
+                  "detachFromLayout": true,
+                  "widgetId": "gutl68s87o",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 520,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "xlb8hua7ie",
+                  "minHeight": 520,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "widgetName": "Text15",
+                      "rightColumn": 36,
+                      "textAlign": "LEFT",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "widgetId": "0cz98i5vmt",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 40,
+                      "isVisible": "{{ordersTable.selectedRow.id !== undefined}}",
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "parentColumnSpace": 29.875,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "fontSize": "HEADING1",
+                      "text": "{{\"Order# \" + ordersTable.selectedRow.id}}"
+                    },
+                    {
+                      "widgetName": "Text16",
+                      "rightColumn": 44,
+                      "textAlign": "LEFT",
+                      "widgetId": "ec7hwwpigw",
+                      "topRow": 4,
+                      "bottomRow": 8,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "parentColumnSpace": 29.875,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{ordersTable.selectedRow.deliveryAddress}}"
+                    },
+                    {
+                      "widgetName": "Text17",
+                      "rightColumn": 45,
+                      "textAlign": "LEFT",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "textColor"
+                        }
+                      ],
+                      "widgetId": "jgv0uu3x5g",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "{{ordersTable.selectedRow.status === \"PAYMENT_PENDING\" ? \"orange\" : ordersTable.selectedRow.status === \"DELIVERED\" ? \"green\" : ordersTable.selectedRow.status === \"REJECTED\" ? \"red\" : \"black\"}}",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "parentColumnSpace": 29.875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 16,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        },
+                        {
+                          "key": "textColor"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{ordersTable.selectedRow.status}}"
+                    },
+                    {
+                      "widgetName": "Button6",
+                      "onClick": "{{showModal('Modal2')}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isDisabled"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "buttonColor": "#F22B2B",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 40,
+                      "type": "BUTTON_WIDGET",
+                      "parentColumnSpace": 29.875,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 51,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        },
+                        {
+                          "key": "isDisabled"
+                        }
+                      ],
+                      "text": "Refund",
+                      "isDisabled": "{{ordersTable.selectedRow.status === \"REFUNDED\"}}",
+                      "rightColumn": 64,
+                      "isDefaultClickDisabled": true,
+                      "iconName": "credit-card",
+                      "widgetId": "am2dpsi2q3",
+                      "isVisible": "{{ordersTable.selectedRow.id !== undefined}}",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "borderRadius": "ROUNDED",
+                      "buttonVariant": "PRIMARY",
+                      "iconAlign": "left"
+                    },
+                    {
+                      "widgetName": "Table1",
+                      "columnOrder": [
+                        "productName",
+                        "mrp",
+                        "listingPrice",
+                        "imageUrl",
+                        "description",
+                        "category",
+                        "isListed",
+                        "availabilityDate",
+                        "channel",
+                        "id",
+                        "createdAt",
+                        "updatedAt"
+                      ],
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "isVisibleDownload": true,
+                      "topRow": 20,
+                      "bottomRow": 50,
+                      "parentRowSpace": 10,
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET",
+                      "parentColumnSpace": 29.875,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "isVisible"
+                        },
+                        {
+                          "key": "primaryColumns.productName.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.mrp.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.listingPrice.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.imageUrl.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.description.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.category.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.isListed.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.availabilityDate.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.channel.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.createdAt.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.updatedAt.computedValue"
+                        }
+                      ],
+                      "primaryColumns": {
+                        "productName": {
+                          "index": 0,
+                          "width": 150,
+                          "id": "productName",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "productName",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.productName))}}"
+                        },
+                        "mrp": {
+                          "index": 1,
+                          "width": 150,
+                          "id": "mrp",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "mrp",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.mrp))}}"
+                        },
+                        "listingPrice": {
+                          "index": 2,
+                          "width": 150,
+                          "id": "listingPrice",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "listingPrice",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.listingPrice))}}"
+                        },
+                        "imageUrl": {
+                          "index": 3,
+                          "width": 150,
+                          "id": "imageUrl",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "imageUrl",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.imageUrl))}}"
+                        },
+                        "description": {
+                          "index": 4,
+                          "width": 150,
+                          "id": "description",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "description",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.description))}}"
+                        },
+                        "category": {
+                          "index": 5,
+                          "width": 150,
+                          "id": "category",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "category",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.category))}}"
+                        },
+                        "isListed": {
+                          "index": 6,
+                          "width": 150,
+                          "id": "isListed",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "isListed",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.isListed))}}"
+                        },
+                        "availabilityDate": {
+                          "index": 7,
+                          "width": 150,
+                          "id": "availabilityDate",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "availabilityDate",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.availabilityDate))}}"
+                        },
+                        "channel": {
+                          "index": 8,
+                          "width": 150,
+                          "id": "channel",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "channel",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.channel))}}"
+                        },
+                        "id": {
+                          "index": 9,
+                          "width": 150,
+                          "id": "id",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "id",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
+                        },
+                        "createdAt": {
+                          "index": 10,
+                          "width": 150,
+                          "id": "createdAt",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "createdAt",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.createdAt))}}"
+                        },
+                        "updatedAt": {
+                          "index": 11,
+                          "width": 150,
+                          "id": "updatedAt",
+                          "horizontalAlignment": "LEFT",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textSize": "PARAGRAPH",
+                          "fontStyle": "REGULAR",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "updatedAt",
+                          "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.updatedAt))}}"
+                        }
+                      },
+                      "delimiter": ",",
+                      "migrated": true,
+                      "derivedColumns": {},
+                      "hiddenColumns": [
+                        "mrp",
+                        "imageUrl",
+                        "description",
+                        "isListed",
+                        "availabilityDate",
+                        "channel"
+                      ],
+                      "rightColumn": 64,
+                      "textSize": "PARAGRAPH",
+                      "widgetId": "db1kphrwnt",
+                      "isVisibleFilters": true,
+                      "tableData": "{{getOrderProducts.data}}",
+                      "isVisible": "{{ordersTable.selectedRow.id !== undefined}}",
+                      "label": "Data",
+                      "searchKey": "",
+                      "fontStyle": "REGULAR",
+                      "version": 3,
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "isVisibleCompactMode": true,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "isVisiblePagination": true,
+                      "verticalAlignment": "CENTER"
+                    },
+                    {
+                      "widgetName": "Text18",
+                      "rightColumn": 16,
+                      "textAlign": "LEFT",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "widgetId": "0dxro3kpwp",
+                      "topRow": 16,
+                      "bottomRow": 20,
+                      "parentRowSpace": 40,
+                      "isVisible": "{{ordersTable.selectedRow.id !== undefined}}",
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "parentColumnSpace": 29.875,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "fontSize": "HEADING1",
+                      "text": "Products"
+                    },
+                    {
+                      "widgetName": "Text19",
+                      "rightColumn": 16,
+                      "textAlign": "LEFT",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "widgetId": "ek4t9o9djx",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 40,
+                      "isVisible": "{{ordersTable.selectedRow.id !== undefined}}",
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "parentColumnSpace": 34.5,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        },
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "{{\"₹\" + ordersTable.selectedRow.orderAmount}}"
+                    },
+                    {
+                      "widgetName": "Text24",
+                      "rightColumn": 64,
+                      "textAlign": "LEFT",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "widgetId": "1macn19a8h",
+                      "topRow": 12,
+                      "bottomRow": 16,
+                      "parentRowSpace": 40,
+                      "isVisible": "{{ordersTable.selectedRow.id === undefined}}",
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "gutl68s87o",
+                      "isLoading": false,
+                      "parentColumnSpace": 34.5,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "isVisible"
+                        }
+                      ],
+                      "fontSize": "PARAGRAPH",
+                      "text": "<h2>👈🏿 Select an order</h2>"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "widgetName": "Modal2",
+              "rightColumn": 0,
+              "detachFromLayout": true,
+              "widgetId": "apytb4wr2y",
+              "topRow": 0,
+              "bottomRow": 0,
+              "parentRowSpace": 1,
+              "isVisible": false,
+              "canOutsideClickClose": true,
+              "type": "MODAL_WIDGET",
+              "canEscapeKeyClose": true,
+              "version": 2,
+              "parentId": "0",
+              "shouldScrollContents": true,
+              "blueprint": {
+                "view": [
+                  {
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "shouldScrollContents": false,
+                      "blueprint": {
+                        "view": [
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 2
+                            },
+                            "position": {
+                              "top": 0,
+                              "left": 14
+                            },
+                            "type": "ICON_WIDGET",
+                            "props": {
+                              "color": "#040627",
+                              "iconName": "cross",
+                              "iconSize": 24
+                            }
+                          },
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 10
+                            },
+                            "position": {
+                              "top": 0,
+                              "left": 0
+                            },
+                            "type": "TEXT_WIDGET",
+                            "props": {
+                              "text": "Modal Title",
+                              "textStyle": "HEADING"
+                            }
+                          },
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 3
+                            },
+                            "position": {
+                              "top": 4,
+                              "left": 10
+                            },
+                            "type": "BUTTON_WIDGET",
+                            "props": {
+                              "buttonStyle": "SECONDARY_BUTTON",
+                              "text": "Cancel"
+                            }
+                          },
+                          {
+                            "size": {
+                              "rows": 1,
+                              "cols": 3
+                            },
+                            "position": {
+                              "top": 4,
+                              "left": 13
+                            },
+                            "type": "BUTTON_WIDGET",
+                            "props": {
+                              "buttonStyle": "PRIMARY_BUTTON",
+                              "text": "Confirm"
+                            }
+                          }
+                        ],
+                        "operations": [
+                          {
+                            "type": "MODIFY_PROPS"
+                          }
+                        ]
+                      },
+                      "detachFromLayout": true,
+                      "children": [],
+                      "isVisible": true,
+                      "isDisabled": false,
+                      "canExtend": true
+                    }
+                  }
+                ]
+              },
+              "isLoading": false,
+              "parentColumnSpace": 1,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "children": [
+                {
+                  "widgetName": "Canvas4",
+                  "rightColumn": 0,
+                  "detachFromLayout": true,
+                  "widgetId": "bek8vtf45d",
+                  "topRow": 0,
+                  "bottomRow": 240,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": true,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "apytb4wr2y",
+                  "shouldScrollContents": false,
+                  "blueprint": {
+                    "view": [
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 2
+                        },
+                        "position": {
+                          "top": 0,
+                          "left": 14
+                        },
+                        "type": "ICON_WIDGET",
+                        "props": {
+                          "color": "#040627",
+                          "iconName": "cross",
+                          "iconSize": 24
+                        }
+                      },
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 10
+                        },
+                        "position": {
+                          "top": 0,
+                          "left": 0
+                        },
+                        "type": "TEXT_WIDGET",
+                        "props": {
+                          "text": "Modal Title",
+                          "textStyle": "HEADING"
+                        }
+                      },
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 3
+                        },
+                        "position": {
+                          "top": 4,
+                          "left": 10
+                        },
+                        "type": "BUTTON_WIDGET",
+                        "props": {
+                          "buttonStyle": "SECONDARY_BUTTON",
+                          "text": "Cancel"
+                        }
+                      },
+                      {
+                        "size": {
+                          "rows": 1,
+                          "cols": 3
+                        },
+                        "position": {
+                          "top": 4,
+                          "left": 13
+                        },
+                        "type": "BUTTON_WIDGET",
+                        "props": {
+                          "buttonStyle": "PRIMARY_BUTTON",
+                          "text": "Confirm"
+                        }
+                      }
+                    ],
+                    "operations": [
+                      {
+                        "type": "MODIFY_PROPS"
+                      }
+                    ]
+                  },
+                  "minHeight": 240,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "isRequired": false,
+                      "widgetName": "Icon2",
+                      "rightColumn": 64,
+                      "onClick": "{{closeModal('Modal2')}}",
+                      "color": "#040627",
+                      "iconName": "cross",
+                      "widgetId": "h2bzyryz3k",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "isVisible": true,
+                      "type": "ICON_WIDGET",
+                      "version": 1,
+                      "parentId": "bek8vtf45d",
+                      "isLoading": false,
+                      "leftColumn": 56,
+                      "dynamicBindingPathList": [],
+                      "iconSize": 24
+                    },
+                    {
+                      "widgetName": "Text22",
+                      "rightColumn": 56,
+                      "textAlign": "LEFT",
+                      "widgetId": "3c2d1zfzu7",
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "bek8vtf45d",
+                      "isLoading": false,
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "fontSize": "HEADING1",
+                      "text": "Refund Order #{{ordersTable.selectedRow.id}}"
+                    },
+                    {
+                      "widgetName": "Button7",
+                      "rightColumn": 47,
+                      "onClick": "{{closeModal('Modal2')}}",
+                      "isDefaultClickDisabled": true,
+                      "buttonColor": "#2E3D49",
+                      "widgetId": "w8hwwktvmg",
+                      "topRow": 18,
+                      "bottomRow": 22,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "bek8vtf45d",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 35,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "ROUNDED",
+                      "buttonVariant": "TERTIARY",
+                      "text": "Cancel",
+                      "isDisabled": false
+                    },
+                    {
+                      "widgetName": "Button8",
+                      "rightColumn": 64,
+                      "onClick": "{{refundAPI.run(() => markOrderRefund.run(() => getOrders.run(() => closeModal('Modal2'))), () => {})}}",
+                      "isDefaultClickDisabled": true,
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "buttonColor": "#2E3D49",
+                      "widgetId": "54fh5v9z6f",
+                      "topRow": 18,
+                      "bottomRow": 22,
+                      "isVisible": true,
+                      "type": "BUTTON_WIDGET",
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "bek8vtf45d",
+                      "isLoading": false,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 47,
+                      "dynamicBindingPathList": [],
+                      "borderRadius": "ROUNDED",
+                      "buttonVariant": "PRIMARY",
+                      "text": "Confirm",
+                      "isDisabled": false
+                    },
+                    {
+                      "widgetName": "Text23",
+                      "rightColumn": 64,
+                      "textAlign": "LEFT",
+                      "widgetId": "z2k233aijz",
+                      "topRow": 8,
+                      "bottomRow": 12,
+                      "parentRowSpace": 40,
+                      "isVisible": true,
+                      "type": "TEXT_WIDGET",
+                      "fontStyle": "",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "bek8vtf45d",
+                      "isLoading": false,
+                      "parentColumnSpace": 26,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 1,
+                      "dynamicBindingPathList": [],
+                      "fontSize": "PARAGRAPH",
+                      "text": "Are you sure you want to refund this order?"
+                    }
+                  ],
+                  "isDisabled": false
+                }
+              ],
+              "width": 456,
+              "height": 240
+            },
+            {
+              "widgetName": "Chart1",
+              "rightColumn": 64,
+              "allowScroll": false,
+              "dynamicPropertyPathList": [
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "widgetId": "jr461ymixc",
+              "topRow": 27,
+              "bottomRow": 68,
+              "parentRowSpace": 40,
+              "isVisible": "{{usersTable.selectedRow.id !== \"\"}}",
+              "type": "CHART_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "isLoading": false,
+              "chartData": {
+                "wfxha130y7": {
+                  "data": " [\n  {\n    \"x\": \"ORDER_PLACED\",\n    \"y\": {{getOrders.data.filter((order) => { return order.status === 'ORDER_PLACED' }).length}}\n  },\n    {\n    \"x\": \"OUT_FOR_DELIVERY\",\n    \"y\": {{getOrders.data.filter((order) => { return order.status === 'OUT_FOR_DELIVERY' }).length}}\n  },\n  {\n    \"x\": \"PAYMENT_PENDING\",\n    \"y\": {{getOrders.data.filter((order) => { return order.status === 'PAYMENT_PENDING'}).length}}\n  },\n    {\n    \"x\": \"REFUNDED\",\n    \"y\": {{getOrders.data.filter((order) => { return order.status === 'REFUNDED' }).length}}\n  }\n]",
+                  "seriesName": "Order Status"
+                }
+              },
+              "yAxisName": "Total Order Revenue $",
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [],
+              "chartName": "📈 Orders",
+              "leftColumn": 36,
+              "dynamicBindingPathList": [
+                {
+                  "key": "chartData.wfxha130y7.data"
+                },
+                {
+                  "key": "isVisible"
+                }
+              ],
+              "xAxisName": "Last Week",
+              "chartType": "PIE_CHART"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Users Page_getUsers",
+              "name": "getUsers",
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "usersTable.searchText",
+                "usersTable.pageSize",
+                "(usersTable.pageNo - 1) * usersTable.pageSize"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "validOnPageLoadActions": true,
+        "id": "Users Page",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "6335278e214302334282bbc3_6335278e214302334282bbc6"
+}

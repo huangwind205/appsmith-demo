@@ -1,0 +1,28 @@
+{
+  "pages": [
+    {
+      "id": "Support Tickets",
+      "isDefault": true
+    },
+    {
+      "id": "Users Page",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "clonedFromApplicationId": "5f2aeb2580ca1f6faaed4e4a",
+  "color": "#C7F3E3",
+  "icon": "location",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "DESKTOP"
+  },
+  "applicationVersion": 1,
+  "forkingEnabled": true,
+  "isManualUpdate": false,
+  "deleted": false
+}

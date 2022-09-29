@@ -1,0 +1,1259 @@
+{
+  "unpublishedPage": {
+    "name": "Support Tickets",
+    "slug": "support-tickets",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1160,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 900,
+          "containerStyle": "none",
+          "snapRows": 128,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 63,
+          "minHeight": 890,
+          "parentColumnSpace": 1,
+          "dynamicTriggerPathList": [],
+          "leftColumn": 0,
+          "dynamicBindingPathList": [],
+          "children": [
+            {
+              "boxShadow": "none",
+              "widgetName": "Tabs1",
+              "dynamicPropertyPathList": [],
+              "topRow": 0,
+              "bottomRow": 88,
+              "parentRowSpace": 40,
+              "type": "TABS_WIDGET",
+              "shouldScrollContents": true,
+              "parentColumnSpace": 74,
+              "dynamicTriggerPathList": [],
+              "leftColumn": 35,
+              "dynamicBindingPathList": [
+                {
+                  "key": "defaultTab"
+                },
+                {
+                  "key": "accentColor"
+                }
+              ],
+              "children": [
+                {
+                  "tabId": "tab1",
+                  "boxShadow": "none",
+                  "widgetName": "Canvas1",
+                  "topRow": 0,
+                  "bottomRow": 790,
+                  "parentRowSpace": 1,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "minHeight": 800,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text2",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 24,
+                      "bottomRow": 39,
+                      "parentRowSpace": 40,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 34.5,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "<h2>👈 Select a Support Ticket</h2>",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 63,
+                      "textAlign": "CENTER",
+                      "widgetId": "66o8bjkz30",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "ugkkycsm7d",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    }
+                  ],
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 2368,
+                  "detachFromLayout": true,
+                  "widgetId": "ugkkycsm7d",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "28qy9d4q6j",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                },
+                {
+                  "tabId": "tab2",
+                  "boxShadow": "none",
+                  "widgetName": "Canvas2",
+                  "topRow": 0,
+                  "bottomRow": 890,
+                  "parentRowSpace": 1,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "minHeight": 800,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text1",
+                      "topRow": 13,
+                      "bottomRow": 87,
+                      "parentRowSpace": 40,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "SCROLL",
+                      "fontFamily": "System Default",
+                      "leftColumn": 2,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "text": "{{ticketsTable.selectedRow.description}}",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 61,
+                      "textAlign": "LEFT",
+                      "widgetId": "bv27fj7bs5",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#2E3D49",
+                      "parentId": "0",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Button1",
+                      "onClick": "{{navigateTo('Users Page', { email: ticketsTable.selectedRow.requester })\n}}",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "buttonColor": "#2E3D49",
+                      "topRow": 1,
+                      "bottomRow": 5,
+                      "parentRowSpace": 40,
+                      "type": "BUTTON_WIDGET",
+                      "parentColumnSpace": 34.5,
+                      "dynamicTriggerPathList": [
+                        {
+                          "key": "onClick"
+                        }
+                      ],
+                      "leftColumn": 47,
+                      "dynamicBindingPathList": [],
+                      "text": "User Details",
+                      "isDisabled": false,
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "isDefaultClickDisabled": true,
+                      "iconName": "person",
+                      "widgetId": "6af2mwjii8",
+                      "isVisible": true,
+                      "version": 1,
+                      "recaptchaType": "V3",
+                      "parentId": "6rczwfuxqd",
+                      "isLoading": false,
+                      "borderRadius": "0.375rem",
+                      "buttonVariant": "PRIMARY",
+                      "iconAlign": "left"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text5",
+                      "displayName": "Text",
+                      "iconSVG": "/static/media/icon.97c59b52.svg",
+                      "topRow": 7,
+                      "bottomRow": 11,
+                      "parentRowSpace": 10,
+                      "type": "TEXT_WIDGET",
+                      "hideCard": false,
+                      "animateLoading": true,
+                      "parentColumnSpace": 7.84375,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "text"
+                        }
+                      ],
+                      "truncateButtonColor": "#FFC13D",
+                      "text": "<h2>Subject: {{ticketsTable.selectedRow.subject}}</h2>",
+                      "key": "j85dst54qs",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 64,
+                      "textAlign": "CENTER",
+                      "widgetId": "mlz5qjkppx",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "textColor": "#231F20",
+                      "version": 1,
+                      "parentId": "bx74wpc2rn",
+                      "renderMode": "CANVAS",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "0.875rem"
+                    }
+                  ],
+                  "labelTextSize": "0.875rem",
+                  "rightColumn": 2368,
+                  "detachFromLayout": true,
+                  "widgetId": "bx74wpc2rn",
+                  "containerStyle": "none",
+                  "isVisible": true,
+                  "version": 1,
+                  "parentId": "28qy9d4q6j",
+                  "isLoading": false,
+                  "borderRadius": "0px"
+                }
+              ],
+              "labelTextSize": "0.875rem",
+              "rightColumn": 64,
+              "widgetId": "28qy9d4q6j",
+              "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+              "defaultTab": "{{ticketsTable.selectedRow.id === \"\" ? \"Blank\" : \"Email\"}}",
+              "shouldShowTabs": false,
+              "tabsObj": {
+                "tab1": {
+                  "widgetId": "ugkkycsm7d",
+                  "index": 0,
+                  "label": "Blank",
+                  "id": "tab1",
+                  "isVisible": true
+                },
+                "tab2": {
+                  "widgetId": "bx74wpc2rn",
+                  "index": 1,
+                  "label": "Email",
+                  "id": "tab2",
+                  "isVisible": true
+                }
+              },
+              "isVisible": true,
+              "version": 3,
+              "parentId": "0",
+              "blueprint": {
+                "view": [
+                  {
+                    "size": {
+                      "rows": 6,
+                      "cols": 16
+                    },
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "tabId": "tab1",
+                      "detachFromLayout": true,
+                      "children": [
+                        "6af2mwjii8"
+                      ],
+                      "containerStyle": "none",
+                      "canExtend": false
+                    }
+                  },
+                  {
+                    "size": {
+                      "rows": 6,
+                      "cols": 16
+                    },
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "tabId": "tab2",
+                      "detachFromLayout": true,
+                      "children": [
+                        "bv27fj7bs5",
+                        "6af2mwjii8"
+                      ],
+                      "containerStyle": "none",
+                      "canExtend": false
+                    }
+                  }
+                ]
+              },
+              "isLoading": false,
+              "borderRadius": "0px"
+            },
+            {
+              "labelTextSize": "0.875rem",
+              "boxShadow": "none",
+              "backgroundColor": "#FFFFFF",
+              "widgetName": "Container1",
+              "rightColumn": 32,
+              "widgetId": "dkhget3ru7",
+              "containerStyle": "card",
+              "topRow": 0,
+              "bottomRow": 88,
+              "parentRowSpace": 40,
+              "isVisible": true,
+              "type": "CONTAINER_WIDGET",
+              "version": 1,
+              "parentId": "0",
+              "blueprint": {
+                "view": [
+                  {
+                    "position": {
+                      "top": 0,
+                      "left": 0
+                    },
+                    "type": "CANVAS_WIDGET",
+                    "props": {
+                      "detachFromLayout": true,
+                      "children": [
+                        "472a29heor",
+                        "dqzd7flg31"
+                      ],
+                      "containerStyle": "none",
+                      "canExtend": false
+                    }
+                  }
+                ]
+              },
+              "isLoading": false,
+              "parentColumnSpace": 74,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "borderRadius": "0px",
+              "children": [
+                {
+                  "labelTextSize": "0.875rem",
+                  "boxShadow": "none",
+                  "widgetName": "Canvas3",
+                  "rightColumn": 2368,
+                  "detachFromLayout": true,
+                  "widgetId": "pammdjlrth",
+                  "containerStyle": "none",
+                  "topRow": 0,
+                  "bottomRow": 880,
+                  "parentRowSpace": 1,
+                  "isVisible": true,
+                  "canExtend": false,
+                  "type": "CANVAS_WIDGET",
+                  "version": 1,
+                  "parentId": "dkhget3ru7",
+                  "minHeight": 800,
+                  "isLoading": false,
+                  "parentColumnSpace": 1,
+                  "dynamicTriggerPathList": [],
+                  "leftColumn": 0,
+                  "dynamicBindingPathList": [],
+                  "borderRadius": "0px",
+                  "children": [
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "ticketsTable",
+                      "columnOrder": [
+                        "id",
+                        "cc_emails",
+                        "fwd_emails",
+                        "reply_cc_emails",
+                        "ticket_cc_emails",
+                        "type",
+                        "fr_escalated",
+                        "spam",
+                        "email_config_id",
+                        "group_id",
+                        "priority",
+                        "requester_id",
+                        "responder_id",
+                        "source",
+                        "company_id",
+                        "status",
+                        "subject",
+                        "association_type",
+                        "support_email",
+                        "to_emails",
+                        "product_id",
+                        "due_by",
+                        "fr_due_by",
+                        "is_escalated",
+                        "custom_fields",
+                        "created_at",
+                        "updated_at",
+                        "associated_tickets_count",
+                        "tags",
+                        "description",
+                        "description_text",
+                        "requester"
+                      ],
+                      "isVisibleDownload": true,
+                      "dynamicPropertyPathList": [],
+                      "topRow": 4,
+                      "bottomRow": 86,
+                      "parentRowSpace": 10,
+                      "isSortable": true,
+                      "type": "TABLE_WIDGET",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [],
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [
+                        {
+                          "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.cc_emails.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.fwd_emails.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.reply_cc_emails.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.ticket_cc_emails.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.fr_escalated.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.spam.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.email_config_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.group_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.priority.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.requester_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.responder_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.source.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.company_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.status.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.subject.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.association_type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.support_email.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.to_emails.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.product_id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.id.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.type.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.due_by.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.fr_due_by.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.is_escalated.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.custom_fields.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.created_at.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.updated_at.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.associated_tickets_count.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.tags.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.description.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.description_text.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.requester.computedValue"
+                        },
+                        {
+                          "key": "accentColor"
+                        }
+                      ],
+                      "primaryColumns": {
+                        "to_emails": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.to_emails))}}",
+                          "textSize": "0.875rem",
+                          "index": 17,
+                          "isVisible": false,
+                          "label": "to_emails",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "to_emails",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "responder_id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.responder_id))}}",
+                          "textSize": "0.875rem",
+                          "index": 10,
+                          "isVisible": false,
+                          "label": "responder_id",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "responder_id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "subject": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.subject))}}",
+                          "textSize": "0.875rem",
+                          "index": 14,
+                          "isVisible": true,
+                          "label": "Subject",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "subject",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "due_by": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.due_by))}}",
+                          "textSize": "0.875rem",
+                          "index": 21,
+                          "isVisible": false,
+                          "label": "due_by",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "due_by",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "fr_escalated": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.fr_escalated))}}",
+                          "textSize": "0.875rem",
+                          "index": 4,
+                          "isVisible": false,
+                          "label": "fr_escalated",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "fr_escalated",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "created_at": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.created_at))}}",
+                          "textSize": "0.875rem",
+                          "index": 25,
+                          "isVisible": false,
+                          "label": "created_at",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "created_at",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "description": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.description))}}",
+                          "textSize": "0.875rem",
+                          "index": 29,
+                          "isVisible": false,
+                          "label": "description",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "description",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "source": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.source))}}",
+                          "textSize": "0.875rem",
+                          "index": 11,
+                          "isVisible": false,
+                          "label": "source",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "source",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "association_type": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.association_type))}}",
+                          "textSize": "0.875rem",
+                          "index": 15,
+                          "isVisible": false,
+                          "label": "association_type",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "association_type",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "type": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.type))}}",
+                          "textSize": "0.875rem",
+                          "index": 20,
+                          "isVisible": true,
+                          "label": "Type",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "type",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "cc_emails": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.cc_emails))}}",
+                          "textSize": "0.875rem",
+                          "index": 0,
+                          "isVisible": false,
+                          "label": "cc_emails",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "cc_emails",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "updated_at": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.updated_at))}}",
+                          "textSize": "0.875rem",
+                          "index": 26,
+                          "isVisible": false,
+                          "label": "updated_at",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "updated_at",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "reply_cc_emails": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.reply_cc_emails))}}",
+                          "textSize": "0.875rem",
+                          "index": 2,
+                          "isVisible": false,
+                          "label": "reply_cc_emails",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "reply_cc_emails",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "product_id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.product_id))}}",
+                          "textSize": "0.875rem",
+                          "index": 18,
+                          "isVisible": false,
+                          "label": "product_id",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "product_id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.id))}}",
+                          "textSize": "0.875rem",
+                          "index": 19,
+                          "isVisible": true,
+                          "label": "ID",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "fwd_emails": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.fwd_emails))}}",
+                          "textSize": "0.875rem",
+                          "index": 1,
+                          "isVisible": false,
+                          "label": "fwd_emails",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "fwd_emails",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "associated_tickets_count": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.associated_tickets_count))}}",
+                          "textSize": "0.875rem",
+                          "index": 27,
+                          "isVisible": false,
+                          "label": "associated_tickets_count",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "associated_tickets_count",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "email_config_id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.email_config_id))}}",
+                          "textSize": "0.875rem",
+                          "index": 6,
+                          "isVisible": false,
+                          "label": "email_config_id",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "email_config_id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "requester": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.requester.email))}}",
+                          "textSize": "0.875rem",
+                          "index": 31,
+                          "isVisible": true,
+                          "label": "Requester",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "requester",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "company_id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.company_id))}}",
+                          "textSize": "0.875rem",
+                          "index": 12,
+                          "isVisible": false,
+                          "label": "company_id",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "company_id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "custom_fields": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.custom_fields))}}",
+                          "textSize": "0.875rem",
+                          "index": 24,
+                          "isVisible": false,
+                          "label": "custom_fields",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "custom_fields",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "description_text": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.description_text))}}",
+                          "textSize": "0.875rem",
+                          "index": 30,
+                          "isVisible": false,
+                          "label": "description_text",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "description_text",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "fr_due_by": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.fr_due_by))}}",
+                          "textSize": "0.875rem",
+                          "index": 22,
+                          "isVisible": false,
+                          "label": "fr_due_by",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "fr_due_by",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "priority": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.priority))}}",
+                          "textSize": "0.875rem",
+                          "index": 8,
+                          "isVisible": false,
+                          "label": "priority",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "priority",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "tags": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.tags))}}",
+                          "textSize": "0.875rem",
+                          "index": 28,
+                          "isVisible": false,
+                          "label": "tags",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "tags",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "is_escalated": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.is_escalated))}}",
+                          "textSize": "0.875rem",
+                          "index": 23,
+                          "isVisible": false,
+                          "label": "is_escalated",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "is_escalated",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "support_email": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.support_email))}}",
+                          "textSize": "0.875rem",
+                          "index": 16,
+                          "isVisible": false,
+                          "label": "support_email",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "support_email",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "group_id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.group_id))}}",
+                          "textSize": "0.875rem",
+                          "index": 7,
+                          "isVisible": false,
+                          "label": "group_id",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "group_id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "ticket_cc_emails": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.ticket_cc_emails))}}",
+                          "textSize": "0.875rem",
+                          "index": 3,
+                          "isVisible": false,
+                          "label": "ticket_cc_emails",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "ticket_cc_emails",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "spam": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.spam))}}",
+                          "textSize": "0.875rem",
+                          "index": 5,
+                          "isVisible": false,
+                          "label": "spam",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "spam",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "requester_id": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.requester_id))}}",
+                          "textSize": "0.875rem",
+                          "index": 9,
+                          "isVisible": false,
+                          "label": "requester_id",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "requester_id",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        },
+                        "status": {
+                          "isDerived": false,
+                          "computedValue": "{{ticketsTable.sanitizedTableData.map((currentRow) => ( currentRow.status))}}",
+                          "textSize": "0.875rem",
+                          "index": 13,
+                          "isVisible": false,
+                          "label": "status",
+                          "fontStyle": "REGULAR",
+                          "columnType": "text",
+                          "horizontalAlignment": "LEFT",
+                          "width": 150,
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "id": "status",
+                          "verticalAlignment": "CENTER",
+                          "isCellVisible": true,
+                          "borderRadius": "0px",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "delimiter": ",",
+                      "columnActions": [],
+                      "migrated": true,
+                      "derivedColumns": {},
+                      "labelTextSize": "0.875rem",
+                      "hiddenColumns": [
+                        "description",
+                        "actions"
+                      ],
+                      "rightColumn": 64,
+                      "textSize": "0.875rem",
+                      "widgetId": "472a29heor",
+                      "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+                      "isVisibleFilters": true,
+                      "tableData": "{{getSupportTickets.data}}",
+                      "isVisible": true,
+                      "label": "Data",
+                      "searchKey": "",
+                      "fontStyle": "REGULAR",
+                      "version": 3,
+                      "parentId": "0",
+                      "serverSidePaginationEnabled": true,
+                      "isLoading": false,
+                      "isVisibleCompactMode": true,
+                      "horizontalAlignment": "LEFT",
+                      "isVisibleSearch": true,
+                      "childStylesheet": {
+                        "button": {
+                          "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "menuButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        },
+                        "iconButton": {
+                          "menuColor": "{{appsmith.theme.colors.primaryColor}}",
+                          "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+                          "boxShadow": "none"
+                        }
+                      },
+                      "borderRadius": "0px",
+                      "isVisiblePagination": true,
+                      "columnSizeMap": {
+                        "subject": 217,
+                        "id": 60,
+                        "email": 217,
+                        "type": 89
+                      },
+                      "verticalAlignment": "CENTER"
+                    },
+                    {
+                      "boxShadow": "none",
+                      "widgetName": "Text4",
+                      "dynamicPropertyPathList": [
+                        {
+                          "key": "fontSize"
+                        }
+                      ],
+                      "topRow": 0,
+                      "bottomRow": 4,
+                      "parentRowSpace": 40,
+                      "type": "TEXT_WIDGET",
+                      "parentColumnSpace": 74,
+                      "dynamicTriggerPathList": [],
+                      "overflow": "NONE",
+                      "fontFamily": "System Default",
+                      "leftColumn": 0,
+                      "dynamicBindingPathList": [],
+                      "text": "📧 Help Desk Tickets",
+                      "labelTextSize": "0.875rem",
+                      "rightColumn": 47,
+                      "textAlign": "LEFT",
+                      "widgetId": "dqzd7flg31",
+                      "isVisible": true,
+                      "fontStyle": "BOLD",
+                      "version": 1,
+                      "textColor": "#231F20",
+                      "parentId": "0",
+                      "isLoading": false,
+                      "borderRadius": "0px",
+                      "fontSize": "1.5rem"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Support Tickets_getSupportTickets",
+              "name": "getSupportTickets",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Support Tickets",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": []
+  },
+  "deleted": false,
+  "gitSyncId": "6335278e214302334282bbc3_6335278e214302334282bbc7"
+}
