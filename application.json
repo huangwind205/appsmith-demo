@@ -7,6 +7,10 @@
     {
       "id": "Users Page",
       "isDefault": false
+    },
+    {
+      "id": "Test1",
+      "isDefault": false
     }
   ],
   "viewMode": false,
@@ -19,7 +23,7 @@
     "type": "FLUID"
   },
   "publishedAppLayout": {
-    "type": "DESKTOP"
+    "type": "FLUID"
   },
   "applicationVersion": 1,
   "forkingEnabled": true,
